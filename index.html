@@ -41,6 +41,8 @@
                 const queryString = window.location.search; 
                 const urlParams = new URLSearchParams(queryString); 
                 let text=urlParams.get('text');
+                let voiceNo=4;
+                voiceNo=urlParams.get('voice');
              
                 
                 let speech = new SpeechSynthesisUtterance();
@@ -51,6 +53,10 @@
                 speech.rate = 1;
                 speech.pitch = 1;
                 
+                voices = window.speechSynthesis.getVoices();
+                speech.voice = voices[voiceNo];
+                speech.lang = voices[voiceNo].lang;
+   
                 window.speechSynthesis.speak(speech);
             }
 		</script>
