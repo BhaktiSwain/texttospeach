@@ -55,7 +55,6 @@
                 
                 voices = window.speechSynthesis.getVoices();
                 speech.voice = voices[voiceNo];
-                speech.lang = voices[voiceNo].lang;
    
                 window.speechSynthesis.speak(speech);
             }
