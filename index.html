@@ -43,7 +43,7 @@
                 const urlParams = new URLSearchParams(queryString); 
                 let text=urlParams.get('text');
           
-                let voiceNo=urlParams.get('voice');
+                let voiceNo=urlParams.get('voice')
              
                 
                 let speech = new SpeechSynthesisUtterance();
@@ -54,7 +54,7 @@
                 speech.volume = 1;
                 speech.rate = 1;
                 speech.pitch = 2;
-                speech.voice = voices[voiceNo];
+                speech.voice = voices[7];
    
                 window.speechSynthesis.speak(speech);
             }
