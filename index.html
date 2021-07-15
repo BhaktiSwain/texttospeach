@@ -41,11 +41,7 @@
               //getting message from url
                 const queryString = window.location.search; 
                 const urlParams = new URLSearchParams(queryString); 
-                let text=urlParams.get('text');
-          
-                let voiceNo=urlParams.get('voice')
-             
-                
+                let text=urlParams.get('text');        
                 let speech = new SpeechSynthesisUtterance();
                 voices = window.speechSynthesis.getVoices();
                 speech.lang = "en-US";
